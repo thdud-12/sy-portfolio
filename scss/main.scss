@@ -1,0 +1,1092 @@
+// 변수 정의
+$font-family: "Pretendard";
+$font-color: #878787;
+$highlight-color: #17b6bc;
+$background-color: #faf7ef;
+$white-color: #fff;
+$border-radius: 2rem;
+$button-height: 3rem;
+$button-width: 10rem;
+$left-img-height: 47rem;
+$left-img-width: 30rem;
+$article-height: 55rem;
+$text-font-size: 1.4rem;
+$header-font-size: 3.6rem;
+
+html.oveflow-hidden,
+html.oveflow-hidden > body {
+  overflow-y: hidden;
+}
+
+html,
+body {
+  font-family: "Pretendard";
+  font-size: 62.5%;
+  // 	rem을 10px로 만드는 코드
+}
+
+[data-aos="fade-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+.site-wrap {
+  height: auto;
+  min-width: 118rem;
+  background-color: #ffe4c2;
+}
+
+// 탑바 구현 시작
+.top-bar {
+  height: 8rem;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+
+  &.active {
+    background-color: #faf7ef;
+  }
+
+  .top-bar__1,
+  .wrap {
+    height: 100%;
+    width: 100%;
+  }
+
+  .inner__1 {
+    height: 100%;
+    max-width: 118rem;
+
+    .con {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-menu {
+      display: flex;
+    }
+
+    //메인 로고 구현
+    .main-logo {
+      background-image: url(https://napkinkorea.co.kr/img/header/logo_300px.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      cursor: pointer;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .pc-menu-btn {
+      height: 100%;
+      width: 7rem;
+      text-align: left;
+      left: 0;
+
+      > i {
+        font-size: 2.5rem;
+        color: #777777;
+        cursor: pointer;
+      }
+    }
+
+    .top-bar__menu {
+      min-width: 0;
+
+      .list-nav {
+        height: 100%;
+        display: flex;
+      }
+
+      .menu__1,
+      .menu__2,
+      .menu__3 {
+        display: inline-block;
+
+        > a {
+          font-size: 1.5rem;
+          color: #777777;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 8rem;
+          padding-right: 5rem;
+        }
+      }
+    }
+
+    .icon-wrap {
+      height: 100%;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+
+      .search-icon {
+        height: 4rem;
+        width: 4rem;
+        font-size: 2rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mypage-icon {
+        height: 4rem;
+        width: 4rem;
+        font-size: 2rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .naver-icon {
+        height: 4rem;
+        width: 4rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > a {
+          background-image: url(https://i.ifh.cc/SSZa0l.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          height: 2rem;
+          width: 2rem;
+          display: block;
+        }
+      }
+    }
+  }
+}
+// 탑바 구현 끝
+
+// 메인 페이지 구현 시작
+.main-con {
+  min-height: 100dvh;
+}
+
+.main-section {
+  height: 100dvh;
+  background-image: url(https://i.ifh.cc/qCoZd5.jpg);
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: center;
+  display: block;
+  margin-top: -9.5rem;
+  position: relative;
+
+  .main-btn {
+    height: 5rem;
+    width: 35rem;
+    border-radius: 3rem;
+    background-color: #ffa231;
+    left: 50%;
+    transform: translateX(55%);
+    bottom: 30%;
+    position: absolute;
+
+    > a {
+      > p {
+        color: #fff;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .next-btn {
+    height: 6.8rem;
+    width: 16rem;
+    background-image: url(https://i.ifh.cc/NjRV8Q.png);
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .page-btn {
+    background-image: url(https://i.ifh.cc/HRd9LO.png);
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 6rem;
+    width: 6rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+}
+
+// 2번째 section 구현 시작
+
+.section-2 {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 92rem;
+  background-color: #fff;
+
+  .section-inner-2 {
+    height: 100%;
+    padding: 12rem 0 12rem 0;
+    position: relative;
+
+    .bubble-btn {
+      height: 7rem;
+      width: 20rem;
+      background-color: #faf7ef;
+      border-radius: 5rem;
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+
+      > span > p {
+        font-size: 2rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.swiper {
+  height: 50dvh;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15rem;
+
+  .swiper-wrapper {
+    width: 30rem;
+  }
+
+  .swiper-slide {
+    perspective: 1200px;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 카드 컨테이너 */
+  .slide {
+    display: block;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+
+    &:hover {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  .basic,
+  .hover {
+    backface-visibility: hidden;
+    width: 100%;
+
+    > img {
+      width: 32rem;
+      height: 35rem;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  /* 앞면 */
+  .basic {
+    position: relative;
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+
+  /* 뒷면 */
+  .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: rotateY(-180deg);
+  }
+}
+
+.swiper-btn {
+  color: #fff !important;
+  background-color: gray;
+  border-radius: 5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+
+  > svg {
+    height: 2rem !important;
+  }
+}
+
+.swiper-button-prev {
+  left: 17% !important;
+  top: 55% !important;
+}
+
+.swiper-button-next {
+  right: 17% !important;
+  top: 55% !important;
+}
+// section-2 구현 끝
+
+// section-3 구현 시작
+.section-3 {
+  height: auto;
+  width: 100%;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 92rem;
+
+  .inner-3 {
+    padding: 10rem 0 10rem 0;
+
+    .section-3-text {
+      .text-wrap {
+        text-align: center;
+
+        p {
+          font-size: $header-font-size;
+          font-weight: 600;
+        }
+
+        .text__2 {
+          color: $highlight-color;
+        }
+      }
+    }
+
+    .menu-page-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3.6rem;
+
+      article {
+        height: $article-height;
+        width: 100rem;
+        display: flex;
+        align-items: center;
+        background-color: $white-color;
+        border-radius: $border-radius;
+        position: sticky;
+        bottom: 8rem;
+        min-height: 36rem;
+
+        .left-img {
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          height: $left-img-height;
+          width: $left-img-width;
+          border-radius: $border-radius;
+          margin-left: 15rem;
+
+          &.at-1 {
+            background-image: url(https://i.ifh.cc/Qjccbb.png);
+          }
+          &.at-2 {
+            background-image: url(https://i.ifh.cc/XxFgnY.png);
+          }
+          &.at-3 {
+            background-image: url(https://i.ifh.cc/sXYNJA.png);
+          }
+          &.at-4 {
+            background-image: url(https://i.ifh.cc/KLZLmf.png);
+          }
+          &.at-5 {
+            background-image: url(https://i.ifh.cc/CCbGbm.png);
+          }
+        }
+
+        .right-menu-wrap {
+          height: 90%;
+          margin-left: 5rem;
+
+          .right-menu__1,
+          .right-menu__2 {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .img__1,
+            .img__2 {
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              height: 20rem;
+              width: 20rem;
+              display: block;
+            }
+
+            .text-wrap {
+              margin-left: 2rem;
+
+              .text__1,
+              .text__3 {
+                font-size: $text-font-size;
+                font-weight: 600;
+                margin-bottom: 1rem;
+              }
+
+              .text__2 {
+                color: $font-color;
+                border-bottom: 1px solid $font-color;
+                margin-bottom: 1rem;
+              }
+
+              .text__4-btn {
+                height: $button-height;
+                width: $button-width;
+                background-color: $font-color;
+                border-radius: $border-radius;
+
+                .text__4 {
+                  font-size: 1.5rem;
+                  color: $white-color;
+                }
+              }
+            }
+
+            // 이미지 URL 설정
+            .img__1 {
+              &.at-1 {
+                background-image: url(https://i.ifh.cc/RSsbyq.png);
+              }
+              &.at-2 {
+                background-image: url(https://i.ifh.cc/7SJ4bO.png);
+              }
+              &.at-3 {
+                background-image: url(https://i.ifh.cc/2vnJaS.png);
+              }
+              &.at-4 {
+                background-image: url(https://i.ifh.cc/YgLx9F.png);
+              }
+              &.at-5 {
+                background-image: url(https://i.ifh.cc/loAaDa.png);
+              }
+            }
+
+            .img__2 {
+              &.at-1 {
+                background-image: url(https://i.ifh.cc/m6Nclq.png);
+              }
+              &.at-2 {
+                background-image: url(https://i.ifh.cc/Bkabhb.png);
+              }
+              &.at-3 {
+                background-image: url(https://i.ifh.cc/q3C7Co.png);
+              }
+              &.at-4 {
+                background-image: url(https://i.ifh.cc/bjR2zL.png);
+              }
+              &.at-5 {
+                background-image: url(https://i.ifh.cc/wNn5sK.png);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.at-1 {
+  z-index: 15;
+}
+
+.at-2 {
+  z-index: 14;
+}
+
+.at-3 {
+  z-index: 13;
+}
+
+.at-4 {
+  z-index: 12;
+}
+
+.at-5 {
+  z-index: 11;
+}
+// section-3 구현 끝
+
+// section-4 구현 시작
+.section-4 {
+  height: 100dvh;
+  background-color: #fff;
+
+  .inner-4 {
+    position: relative;
+    max-width: 118rem;
+    width: 95%;
+    height: 100%;
+
+    .flex-box {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      img {
+        display: block;
+        max-width: none;
+        height: auto;
+      }
+
+      .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5rem;
+      }
+
+      // 모바일 main - 데스크톱에서 숨김
+      .mo-main {
+        display: none;
+      }
+
+      .section-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .section-logo {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        font-size: clamp(48px, 10vw, 120px);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .rolling-wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 12rem !important;
+        overflow: hidden;
+        transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .span-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translateY(20px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.35s ease, transform 0.35s ease;
+        pointer-events: none;
+
+        &.active {
+          opacity: 1;
+          transform: translate(-50%, -50%) translateY(0);
+          pointer-events: auto;
+        }
+
+        img {
+          height: clamp(40px, 8vw, 100px);
+          width: auto;
+          display: block;
+        }
+      }
+
+      .hero-logo .col {
+        height: clamp(40px, 8vw, 100px);
+        width: auto;
+        display: block;
+      }
+
+      > p,
+      a {
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .more-link {
+        display: flex;
+        margin-top: 5rem;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          background-image: url(https://i.ifh.cc/GaGROg.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          object-fit: contain;
+          height: 100%;
+          width: 5.5rem;
+          border: 1px solid #ddd;
+          margin-right: 2rem;
+        }
+      }
+
+      .text__link {
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 2px;
+          background: #232323;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// section-4 구현 끝
+
+// 반응형 구현
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .mobile-wrap {
+    display: none;
+  }
+
+  .section-2 {
+    min-height: 92rem;
+    width: 100%;
+
+    .section-inner-2 {
+      height: 100dvh;
+
+      .swiper-wrapper {
+        width: 20rem;
+      }
+
+      .swiper-slide {
+        width: 100%;
+      }
+    }
+  }
+
+  .bubble-btn {
+    height: 7rem;
+    width: 20rem;
+
+    > span > p {
+      font-size: 2rem;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 30% !important;
+    top: 60% !important;
+  }
+
+  .swiper-button-next {
+    right: 30% !important;
+    top: 60% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .main-con {
+    min-height: 70dvh;
+    z-index: 40;
+    padding: 0 !important;
+    margin-top: -6rem;
+  }
+
+  // 	모바일 top-bar 구현 시작
+  .mobile-wrap {
+    display: block;
+    height: 6rem;
+
+    .mobile-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      .menu-btn {
+        height: 4rem;
+        width: 4rem;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-right: 2rem;
+        z-index: 100;
+      }
+
+      .side-menu {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        z-index: 110;
+        text-align: left;
+        // transform: translate(100%);
+        transition: all 0.5s;
+
+        .side-menu-wrap {
+          height: 100%;
+
+          .side-top {
+            height: 6rem;
+          }
+
+          .side-left {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // 	main-section 구현 시작
+
+  .main-section {
+    min-height: 60rem;
+    height: 100dvh;
+    background-image: url(https://i.ifh.cc/WzWdKf.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    display: block;
+    position: relative;
+    margin-top: 0rem;
+
+    .main-btn {
+      height: 4rem;
+      width: 30rem;
+      border-radius: 3rem;
+      background-color: #ffa231;
+      transform: translateX(-50%);
+      bottom: 50%;
+      position: absolute;
+
+      > a {
+        > p {
+          color: #fff;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .next-btn {
+      height: 6.8rem;
+      width: 16rem;
+      background-image: url(https://i.ifh.cc/NjRV8Q.png);
+      object-fit: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .page-btn {
+      background-image: url(https://i.ifh.cc/HRd9LO.png);
+      object-fit: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 6rem;
+      width: 6rem;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+  }
+
+  // 	section-2 구현 시작
+  .section-2 {
+    min-height: 60rem;
+
+    .section-inner-2 {
+      padding: 15rem 0 6 15rem 0;
+    }
+
+    .bubble-btn {
+      height: 5rem !important;
+      width: 15rem !important;
+
+      > span > p {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    .swiper {
+      margin-top: 7rem;
+    }
+
+    .swiper-slide {
+      width: 30rem;
+    }
+
+    .basic,
+    .hover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .swiper-button-prev {
+    left: 3% !important;
+    top: 50% !important;
+  }
+
+  .swiper-button-next {
+    right: 3% !important;
+    top: 50% !important;
+  }
+
+  // 	section-3 구현 시작
+
+  .section-3 {
+    width: 100%;
+
+    .inner-3 {
+      width: 100%;
+      padding: 8rem 0;
+
+      .section-3-text {
+        margin-bottom: 3rem;
+        .text-wrap {
+          p {
+            font-size: 2.4rem !important;
+          }
+        }
+      }
+
+      .menu-page-wrap {
+        gap: 15rem;
+
+        article {
+          height: 63rem !important;
+          width: 90%;
+          flex-direction: column;
+          padding: 2rem;
+          margin-left: 3rem;
+
+          .left-img {
+            display: none;
+          }
+
+          .right-menu-wrap {
+            width: 100%;
+            height: 80rem;
+            margin-left: 0;
+
+            .right-menu__1,
+            .right-menu__2 {
+              height: auto;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 1.5rem 0;
+              border-bottom: 1px solid #eee;
+              gap: 1rem;
+
+              &:last-child {
+                border-bottom: none;
+              }
+
+              .img__1,
+              .img__2 {
+                width: 100%;
+                height: 13rem;
+              }
+
+              .text-wrap {
+                margin-left: 0;
+                width: 100%;
+
+                .text__1 {
+                  font-size: 1.4rem !important;
+                  font-weight: 600;
+                  line-height: 1.4;
+                }
+
+                .text__2 {
+                  font-size: 1.2rem !important;
+                  color: $font-color;
+                  padding-bottom: 0.5rem;
+                }
+
+                .text__3 {
+                  font-size: 1.4rem !important;
+                  color: $highlight-color;
+                  font-weight: 700;
+                }
+
+                .text__4-btn {
+                  width: 100%;
+                  height: 4rem;
+                  margin-top: 1rem;
+                  background-color: $highlight-color;
+
+                  .text__4 {
+                    font-size: 1.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 	section-4 구현 시작
+  .section-4 {
+    height: auto;
+    min-height: 100dvh;
+    padding: 2rem 0;
+    background-color: #fff;
+
+    .inner-4 {
+      width: 100%;
+      height: 100dvh;
+
+      .flex-box {
+        height: 100%;
+        padding: 0 2rem;
+
+        // 데스크톱 main 숨김
+        .main {
+          display: none !important;
+        }
+
+        // 모바일 main 표시
+        .mo-main {
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10rem;
+          width: 100%;
+
+          .section-content {
+            width: 100%;
+            gap: 30px;
+          }
+
+          .section-logo {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+
+            .col {
+              height: clamp(25px, 5vw, 40px) !important;
+              width: auto;
+            }
+          }
+
+          .rolling-wrapper {
+            height: 5rem !important;
+            width: auto;
+            min-width: 10rem;
+
+            .span-img img {
+              height: clamp(25px, 5vw, 40px);
+            }
+          }
+        }
+
+        // 텍스트 반응형
+        > p {
+          font-size: 1.8rem !important;
+          line-height: 1.5;
+          word-break: keep-all;
+          padding: 0 1rem;
+        }
+
+        // 링크 버튼 반응형
+        .more-link {
+          margin-top: 3rem;
+          flex-direction: row;
+          align-items: center;
+          gap: 1.5rem;
+
+          &::before {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 0;
+            background-size: 60%;
+          }
+
+          .text__link {
+            font-size: 1.6rem !important;
+          }
+        }
+      }
+    }
+  }
+}
