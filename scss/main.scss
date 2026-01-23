@@ -13,6 +13,30 @@ $article-height: 55rem;
 $text-font-size: 1.4rem;
 $header-font-size: 3.6rem;
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
 html.oveflow-hidden,
 html.oveflow-hidden > body {
   overflow-y: hidden;
@@ -41,6 +65,11 @@ body {
 }
 
 // 탑바 구현 시작
+
+.menu-btn {
+  display: none;
+}
+
 .top-bar {
   height: 8rem;
   width: 100%;
@@ -190,7 +219,7 @@ body {
   object-fit: contain;
   background-position: center;
   display: block;
-  margin-top: -9.5rem;
+  margin-top: -8rem;
   position: relative;
 
   .main-btn {
@@ -619,7 +648,9 @@ body {
         justify-content: center;
         white-space: nowrap;
         opacity: 0;
-        transition: opacity 0.35s ease, transform 0.35s ease;
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease;
         pointer-events: none;
 
         &.active {
@@ -688,6 +719,73 @@ body {
     }
   }
 }
+
+// footer 구현 시작
+.footer {
+  height: 55dvh;
+  border-top: 1px solid #ddd;
+  padding: 3rem 0 3rem 0;
+  background-color: #fff;
+
+  .footer-inner {
+    max-width: 118rem;
+    width: 90%;
+    height: 100%;
+
+    .flex-box {
+      display: flex;
+      height: 100%;
+      width: 100%;
+
+      .footer-left {
+        width: 50%;
+
+        .footer-logo {
+          background-image: url(https://i.ifh.cc/1pqvRQ.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          height: 5rem;
+          width: 15rem;
+          display: inline-block;
+          margin-bottom: 3.5rem;
+        }
+
+        .footer-info {
+          height: auto;
+          width: 100%;
+          display: flex;
+          text-align: left;
+          font-size: 1.2rem;
+          margin-bottom: 3rem;
+        }
+
+        .email,
+        .call,
+        .internet {
+          font-weight: 600;
+        }
+      }
+
+      .footer-right {
+        width: 50%;
+        right: 0;
+
+        .site-map {
+          ul {
+            li {
+              font-size: 2rem;
+              text-align: right;
+              font-weight: 600;
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// footer 구현 끝
 
 // section-4 구현 끝
 
